@@ -1,0 +1,25 @@
+\documentclass[a4paper,12pt]{report}
+\input{_preamble}
+
+\begin{document} 
+% Start Vorspann
+\pagenumbering{Roman} % Römische Seitenzahl
+\input{content/01_vorspann/01.1_titelblatt}
+\include{content/01_vorspann/01.2_abstract}
+\include{content/01_vorspann/01.3_vorwort}
+\setcounter{page}{2}
+\tableofcontents % Inhaltsverzeichnis
+\listoffigures % Abbildungsverzeichnis
+\listoftables % Tabellenverzeichnis
+\include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
+% Ende Vorpsann
+% Start Textteil
+\pagenumbering{arabic} % Arabische Seitenzahl
+\include{content/02_textteil/einleitung}
+\include{content/02_textteil/kapitel1}
+% Ende Textteil
+% Start Nachspann
+\bibliography{content/00_assets/quellen.bib}
+\include{content/03_nachspann/eiderklaerung}
+% Ende Nachspann
+\end{document}

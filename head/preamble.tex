@@ -7,20 +7,12 @@
 \bibliographystyle{apacite}
 \usepackage[printonlyused]{acronym}
 
-\usepackage{url}
-\urlstyle{same}
-
 \usepackage{hyphenat}
 \hyphenation{Mathe-matik wieder-gewinnen}
 
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
-
-\usepackage[a-2b,mathxmp]{pdfx}
-\pdfvariable omitcidset=1
-
-\hypersetup{pdfencoding=unicode,colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black}
 
 \graphicspath{{content/00_assets}}
 
@@ -38,7 +30,6 @@
 \titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection.}{4pt}{}
 \titlespacing*{\subsection}{0pt}{6pt}{6pt}
 \setmainfont{Times New Roman}
-
 \setdefaultlanguage[babelshorthands=true,variant=swiss]{german}
 % Babelshorthand:
 % "` for German-style left double quotes („)
@@ -54,3 +45,44 @@
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancyplain}
 \rfoot{\footnotesize\thepage}
+
+\usepackage[pdfa]{hyperref}
+\usepackage{hyperxmp}
+\usepackage{embedfile}
+\pdfvariable omitcidset=1
+
+%\embedfile[afrelationship={/Source},ucfilespec={main.tex},mimetype={application/x-tex}]{main.tex}
+
+\hypersetup{%
+    pdflang=\sprache,
+    pdftitle={\haupttitel},
+    pdfsubtitle={\untertitel},
+    pdfauthor={\autorenschaft},
+    pdfdate={\datumBisRFC},
+    pdfsubject={\zusammenfassung},
+    pdfkeywords={\modul, \schlagworte},
+    pdfcontactaddress={\adresse},
+    pdfcontactcity={\ort},
+    pdfcontactpostcode={\plz},
+    pdfcontactphone={\telefon},
+    pdfcontactemail={\email},
+    colorlinks,
+    unicode,
+    allcolors=black,
+    pdfapart=2, %set to 1 for PDF/A-1
+    pdfaconformance=U
+}
+
+%Create an OutputIntent in order to correctly specify colours
+\immediate\pdfobj stream attr{/N 3} file{sRGB.icc}
+\pdfcatalog{%
+  /OutputIntents [
+    <<
+      /Type /OutputIntent
+      /S /GTS_PDFA1
+      /DestOutputProfile \the\pdflastobj\space 0 R
+      /OutputConditionIdentifier (sRGB)
+      /Info (sRGB)
+    >>
+  ]
+}

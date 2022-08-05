@@ -1,4 +1,33 @@
 # LaTeX Vorlage FH Graubünden
 - LaTeX Vorlage für wissenschaftliche Arbeiten an der Fachhochschule Graubünden.
+    - content: Arbeit verfassen
+    - head: In metadata Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
 - Auch verfügbar unter: https://www.overleaf.com/read/vcyttfbpdhwp 
-- Generiert PDF/A-2b
+- Generiert PDF/A-2u (Mit veraPDF validiert)
+
+## Voraussetzungen:
+- LuaLaTex
+- Packages
+    - titlesec 
+    - fontspec
+    - polyglossia 
+    - setspace 
+    - fancyhdr 
+    - lscape 
+    - caption 
+    - subcaption 
+    - floatrow 
+    - inputenc 
+    - graphicx 
+    - enumitem
+    - tabularx 
+    - geometry
+    - fontenc
+    - abstract
+    - apacite
+    - acronym
+    - hyphenat
+    - chngcntr
+    - pdfa
+    - hyperxmp
+    - embedfile

@@ -1,7 +1,9 @@
+\directlua{pdf.setminorversion(7)}
+\directlua{pdf.inclusioncopyfonts(1)}
 \documentclass[a4paper,12pt]{report}
-\input{head/_metadata}
-\input{head/_preamble}
-\begin{document} 
+\input{head/metadata}
+\input{head/preamble}
+\begin{document}
 % Start Vorspann
 \pagenumbering{Roman} % Römische Seitenzahl
 \input{content/01_vorspann/01.1_titelblatt}
@@ -23,3 +25,4 @@
 \include{content/03_nachspann/eiderklaerung}
 % Ende Nachspann
 \end{document}
+

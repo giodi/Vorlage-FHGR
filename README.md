@@ -24,7 +24,7 @@
     - geometry
     - fontenc
     - abstract
-    - apacite
+    - biblatex
     - acronym
     - hyphenat
     - chngcntr

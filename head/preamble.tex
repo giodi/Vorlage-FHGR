@@ -1,10 +1,14 @@
-\usepackage{titlesec, fontspec, polyglossia, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles}
+\usepackage{titlesec, fontspec, polyglossia, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, csquotes}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[addtotoc]{abstract}
+
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
 \addbibresource{content/00_assets/quellen.bib}
+\let\cite\textcite
+\let\citep\parencite
+
 \usepackage[printonlyused]{acronym}
 
 \usepackage{hyphenat}

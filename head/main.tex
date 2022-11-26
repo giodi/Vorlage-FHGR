@@ -4,6 +4,11 @@
 \input{head/metadata}
 \input{head/preamble}
 \begin{document}
+\renewcommand{\figurename}{Abb.}
+\renewcommand{\tablename}{Tab.}
+\renewcommand*\listfigurename{\normalfont\large\bfseries{Abbildungsverzeichnis}}
+\renewcommand*\listtablename{\normalfont\large\bfseries{Tabellenverzeichnis}}
+\renewcommand*\contentsname{\normalfont\large\bfseries{Inhaltsverzeichnis}}
 % Start Vorspann
 \pagenumbering{Roman} % Römische Seitenzahl
 \input{content/01_vorspann/01.1_titelblatt}
@@ -11,8 +16,13 @@
 \include{content/01_vorspann/01.3_vorwort}
 \setcounter{page}{2}
 \tableofcontents % Inhaltsverzeichnis
-\listoffigures % Abbildungsverzeichnis
-\listoftables % Tabellenverzeichnis
+\begingroup
+	\renewcommand*{\addvspace}[1]{}
+    \newpage
+	\listoffigures
+	\newpage
+	\listoftables
+\endgroup
 \include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
 % Ende Vorpsann
 % Start Textteil

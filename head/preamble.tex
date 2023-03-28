@@ -1,7 +1,6 @@
-\usepackage{titlesec, fontspec, polyglossia, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, csquotes, tocloft, xstring}
+\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, csquotes, tocloft, xstring}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
-\usepackage[T1]{fontenc}
 \usepackage[addtotoc]{abstract}
 
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
@@ -11,6 +10,7 @@
 
 \usepackage[printonlyused]{acronym}
 
+\usepackage[ngerman]{babel}
 \usepackage{hyphenat}
 \hyphenation{Mathe-matik wieder-gewinnen}
 
@@ -34,7 +34,6 @@
 \titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection.}{4pt}{}
 \titlespacing*{\subsection}{0pt}{6pt}{6pt}
 \setmainfont{Times New Roman}
-\setdefaultlanguage[babelshorthands=true,variant=swiss]{german}
 % Babelshorthand:
 % "` for German-style left double quotes („)
 % "' for German-style right double quotes (“)
@@ -52,7 +51,6 @@
 \setlength{\cftfigindent}{0cm}
 \setlength{\cfttabindent}{0cm}
 
-\setotherlanguages{english,french,italian}
 \setstretch{1.3}
 \setlength{\parindent}{2.23em}
 \fancyhf{}

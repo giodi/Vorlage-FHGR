@@ -16,17 +16,21 @@
 \include{content/01_vorspann/01.3_vorwort}
 \setcounter{page}{2}
 \tableofcontents % Inhaltsverzeichnis
+\setacronymstyle{long-short}
+\setglossarystyle{listdotted}
+\renewcommand*{\acronymname}{Abkürzungsverzeichnis}
+\printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 \begingroup
-	\renewcommand*{\addvspace}[1]{}
+    \renewcommand*{\addvspace}[1]{}
     \newpage
 	\listoffigures
 	\newpage
 	\listoftables
 \endgroup
 \include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
-% Ende Vorpsann
+% Ende Vorspann
 % Start Textteil
-\pagenumbering{arabic} % Arabische Seitenzahl
+\pagenumbering{arabic} 
 \include{content/02_textteil/einleitung}
 \include{content/02_textteil/kapitel1}
 % Ende Textteil

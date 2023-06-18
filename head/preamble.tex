@@ -1,24 +1,26 @@
-\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, csquotes, tocloft, xstring}
+\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[addtotoc]{abstract}
-
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
-\addbibresource{content/00_assets/quellen.bib}
-\let\cite\textcite
-\let\citep\parencite
+\usepackage[nswissgerman]{babel}
+\usepackage[autostyle]{csquotes}
+\usepackage[acronym]{glossaries}
 
-\usepackage[printonlyused]{acronym}
-
-\usepackage[ngerman]{babel}
-\usepackage{hyphenat}
-\hyphenation{Mathe-matik wieder-gewinnen}
-
-\usepackage{chngcntr}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
+\makenoidxglossaries
+\input{content/01_vorspann/01.4_abkuerzungsverzeichnis_glossar}
 
 \graphicspath{{content/00_assets}}
+\addbibresource{content/00_assets/quellen.bib}
+
+% cite with acronym. 
+% Example input: \citeAbbr{schweizerische_archivdirektorinnen-_und_archivdirektorenkonferenz_informations-_2018}{adk}
+\newcommand{\parenciteabbr}[2]{(\acrlong{#2} [\acrshort{#2}], \citeyear{#1})}
+\newcommand{\textciteabbr}[2]{\acrlong{#2} (\acrshort{#2}, \citeyear{#1})}
+\newcommand{\acrfullSqBr}[1]{\acrlong{#1} [\acrshort{#1}]}
+
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 
 \renewcommand{\thetable}{\arabic{table}}
 \renewcommand{\thefigure}{\arabic{figure}}
@@ -26,7 +28,7 @@
 \captionsetup[table]{font={footnotesize},labelfont=it,labelsep=period}
 \captionsetup[figure]{font={footnotesize},labelfont=it,labelsep=period}
 % \captionsetup[subfigure]{font={footnotesize},labelfont=it,labelsep=period,labelformat=simple}
-\renewcommand{\arraystretch}{1.3}
+
 \titleformat{\chapter}[block]{\normalfont\large\bfseries}{\thechapter.}{4pt}{}
 \titlespacing*{\chapter}{0pt}{0pt}{6pt}
 \titleformat{\section}[block]{\normalfont\normalsize\bfseries}{\thesection.}{4pt}{}
@@ -34,12 +36,6 @@
 \titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection.}{4pt}{}
 \titlespacing*{\subsection}{0pt}{6pt}{6pt}
 \setmainfont{Times New Roman}
-% Babelshorthand:
-% "` for German-style left double quotes („)
-% "' for German-style right double quotes (“)
-% "< for French-style left double quotes («)
-% "> for French-style right double quotes (»).
-% More: https://texdoc.org/serve/polyglossia/0
 
 % Einstellungen für tocloft
 \renewcommand{\cftfigpresnum}{Abb. }
@@ -51,8 +47,9 @@
 \setlength{\cftfigindent}{0cm}
 \setlength{\cfttabindent}{0cm}
 
-\setstretch{1.3}
-\setlength{\parindent}{2.23em}
+\setstretch{1.3} % Zeilenabstand
+\renewcommand{\arraystretch}{1.3} % Zeilenabstand innerhalb von Tabellen
+\setlength{\parindent}{2.23em} % Einzug neuer Absatz
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancyplain}
@@ -72,8 +69,6 @@
     \noindent
     {\normalfont\large\bfseries{#1}}\vspace{6pt}\\%
 }%
-
-%\embedfile[afrelationship={/Source},ucfilespec={main.tex},mimetype={application/x-tex}]{main.tex}
 
 \hypersetup{%
     pdflang=\sprache,
@@ -95,7 +90,7 @@
     pdfaconformance=U
 }
 
-%Create an OutputIntent in order to correctly specify colours
+% 
 \immediate\pdfobj stream attr{/N 3} file{sRGB.icc}
 \pdfcatalog{%
   /OutputIntents [

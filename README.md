@@ -10,7 +10,7 @@
 - Packages
     - titlesec 
     - fontspec
-    - polyglossia 
+    - babel 
     - setspace 
     - fancyhdr 
     - lscape 
@@ -25,7 +25,7 @@
     - fontenc
     - abstract
     - biblatex
-    - acronym
+    - glossaries
     - hyphenat
     - chngcntr
     - pdfa

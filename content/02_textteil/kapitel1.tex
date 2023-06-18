@@ -1,14 +1,45 @@
 \chapter{Erstes Kapitel}
-Dies ist eine Vorlage für wissenschaftliche Arbeiten an der FHGR nach \cite{selina_leitfaden_nodate}. Wörter kann man auch abkürzen: \ac{zb}, \ac{etc}. Die folgende Abbildung zeigt eine Alpendohle (Abb. \ref{fig:alpendohle}).
+\label{kap:eins}
+Dies ist eine Vorlage für wissenschaftliche Arbeiten an der FHGR nach \textcite{selina_leitfaden_nodate}. Nachfolgend einige Tipps und Funktionen, welche in der Vorlage enthalten sind.
 
-\begin{figure}[h]
+\section{Glossar und Abkürzungen}
+Mit den Befehlen \setminus acrlong\{zb\}, \setminus acrshort\{zb\} oder \setminus acrfull\{zb\} ist das Ausgeben der im Dokument conten/00\_assets/01\_Vorspann/01.4\_abkuerzungsverzeichnis\_glossar.tex Einträgen möglich: \acrlong{zb}, \acrshort{zb}, \acrfull{zb}.
+
+\section{Zitieren}
+Für das Zitieren wird die Erweiterung BibLaTeX verwendet. Sämtliche Befehle und Funktionen des Pakets können im Handbuch nachgeschlagen werden\footnote{https://mirror.metanet.ch/tex-archive/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf}. Voraussetzung ist, dass die Quellen erst im BibLaTeX Format unter content/00\_assets/quellen.bib abgelegt sind (z. B. via Zotero, Mendely oder als Datei). Nachfolgend Beispiele mit den üblichsten Befehlen:\\
+\\
+\setminus textcite\{diani\_black\_2016\} gibt als Ausgabe:\\ 
+\textcite{diani_black_2016}\\
+\\
+\setminus parencite\{diani\_black\_2016\} gibt als Ausgabe:\\ 
+\parencite{diani_black_2016}\\
+\\
+\setminus parencites[S. 10]\{diani\_black\_2016\}[S. 20]\{selina\_leitfaden\_nodate\} gibt als Ausgabe:\\ 
+\parencites[S. 10]{diani_black_2016}[S. 20]{selina_leitfaden_nodate}\\
+\\
+Zusätzlich stehen die folgenden eigens im Template definierten Befehle zur Verfügung:\\
+\\
+\setminus parenciteabbr\{org\_2022\}\{orln\} gibt als Ausgabe:\\ 
+\parenciteabbr{org_2022}{orln}\\
+\\
+\setminus textciteabbr\{org\_2022\}\{orln\} gibt als Ausgabe:\\ 
+\textciteabbr{org_2022}{orln}\\
+\\
+Zur Formatierung eines Blockzitats kann der Befehl \setminus begin\{quote\} ... \setminus end\{quote\} verwendet werden:
+\begin{quote}
+Blockzitate sind wörtliche Zitate von 40 Wörtern oder mehr; sie werden als eigener Absatz ohne Anführungszeichen angeführt.
+Ein Blockzitat beginnt stets in einer neuen Zeile, wird zur Gänze (also jede Zeile) 1,3 cm oder fünf Leerschritte eingerückt und mit zweizeiligem Abstand geschrieben. Absätze innerhalb eines Blockzitates werden vom neuen Rand des Blockzitates eingerückt. Blockzitate werden nicht in Anführungszeichen gesetzt, darin aufscheinende Zitate werden in doppelten Anführungszeichen wiedergegeben. Die Quellenangabe am Ende eines Blockzitates steht nach dem letzten schließenden Punkt des Zitates in Klammern gesetzt, danach folgt kein weiterer Punkt. \parencite[S. 111]{psychologie_richtlinien_2016}
+\end{quote}
+
+\chapter{Ein Bild}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{alpendohle.jpg}
     \caption{Eine Alpendohle \parencite{diani_black_2016}}
     \label{fig:alpendohle}
 \end{figure}
 
-Sit amet mattis vulputate enim nulla aliquet. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Turpis egestas integer eget aliquet nibh praesent. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sem viverra aliquet eget sit. Id leo in vitae turpis massa sed elementum tempus egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Eget sit amet tellus cras adipiscing enim eu turpis. Pulvinar neque laoreet suspendisse interdum consectetur libero. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Amet purus gravida quis blandit turpis cursus in hac habitasse. In aliquam sem fringilla ut morbi tincidunt augue. Tellus molestie nunc non blandit massa enim nec. Mi eget mauris pharetra et ultrices neque.
-
+\chapter{Tabelle}
+Das folgende Beispiel zeit eine Tabelle:
 \begin{table}[ht]
 \begin{tabularx}{\textwidth} {
     >{\raggedright\arraybackslash}X 
@@ -30,13 +61,3 @@ Sit amet mattis vulputate enim nulla aliquet. Risus at ultrices mi tempus imperd
 \caption{Beispiel einer Tabelle.}
     \label{tab:tabelle}
 \end{table}
-
-\section{Subkapitel}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Nisl pretium fusce id velit ut tortor pretium. Sed odio morbi quis commodo. In hac habitasse platea dictumst quisque sagittis. Tristique senectus et netus et malesuada fames ac. Pellentesque nec nam aliquam sem et tortor. Pretium quam vulputate dignissim suspendisse in est. Quam pellentesque nec nam aliquam sem et tortor consequat id. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Augue mauris augue neque gravida in fermentum et sollicitudin ac. Mattis enim ut tellus elementum sagittis vitae. Duis at consectetur lorem donec massa sapien faucibus. Semper auctor neque vitae tempus quam pellentesque nec nam. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.
-
-\section{Subkapitel}
-Tempor orci dapibus ultrices in iaculis nunc sed. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Tellus integer feugiat scelerisque varius morbi enim nunc. Neque vitae tempus quam pellentesque. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. In mollis nunc sed id semper risus. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Condimentum lacinia quis vel eros donec ac odio tempor orci. Purus non enim praesent elementum facilisis leo vel fringilla. Proin sagittis nisl rhoncus mattis rhoncus urna. Risus sed vulputate odio ut enim. Eu lobortis elementum nibh tellus.
-\begin{quote}
-    At erat pellentesque adipiscing commodo elit. Ut sem viverra aliquet eget sit amet. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Rutrum quisque non tellus orci ac auctor. Purus semper eget duis at tellus at urna. Ultrices gravida dictum fusce ut. Nec dui nunc mattis enim ut tellus elementum sagittis. Donec enim diam vulputate ut pharetra. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Facilisis volutpat est velit egestas dui. Mollis nunc sed id semper risus in hendrerit gravida.
-\end{quote}
-Sit amet mattis vulputate enim nulla aliquet. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Turpis egestas integer eget aliquet nibh praesent. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sem viverra aliquet eget sit. Id leo in vitae turpis massa sed elementum tempus egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Eget sit amet tellus cras adipiscing enim eu turpis. Pulvinar neque laoreet suspendisse interdum consectetur libero. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Amet purus gravida quis blandit turpis cursus in hac habitasse. In aliquam sem fringilla ut morbi tincidunt augue. Tellus molestie nunc non blandit massa enim nec. Mi eget mauris pharetra et ultrices neque.

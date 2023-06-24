@@ -16,10 +16,6 @@
 \include{content/01_vorspann/01.3_vorwort}
 \setcounter{page}{2}
 \tableofcontents % Inhaltsverzeichnis
-\setacronymstyle{long-short}
-\setglossarystyle{listdotted}
-\renewcommand*{\acronymname}{Abkürzungsverzeichnis}
-\printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 \begingroup
     \renewcommand*{\addvspace}[1]{}
     \newpage
@@ -27,6 +23,10 @@
 	\newpage
 	\listoftables
 \endgroup
+\setacronymstyle{long-short}
+\setglossarystyle{listdotted}
+\renewcommand*{\acronymname}{Abkürzungsverzeichnis}
+\printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 \include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
 % Ende Vorspann
 % Start Textteil

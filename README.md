@@ -1,11 +1,23 @@
 # LaTeX Vorlage FH Graubünden
+- English below
 - LaTeX Vorlage für wissenschaftliche Arbeiten an der Fachhochschule Graubünden.
-    - content: Arbeit verfassen
-    - head: In metadata Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
+- Verzeichnissstruktur:
+    - content: Arbeit verfassen.
+    - head: In metadata.tex Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
 - Auch verfügbar unter: https://www.overleaf.com/read/vcyttfbpdhwp 
-- Generiert PDF/A-2u (Mit veraPDF validiert)
+- Generiert PDF/A-2u (Mit veraPDF validiert).
 
-## Voraussetzungen / Prerequisits:
+# LaTeX Template University of Applied Sciences of the Grisons
+- LaTeX template for scientific work at the University of Applied Sciences Graubünden.
+- Folder structure:
+    - content: Writing the paper.
+    - head: Enter information in metadata.tex. Used for PDF metadata and cover page.
+- If a paper is written in English, change the following:
+    - In head/preamble.tex change \usepackage[english, nswissgerman]{babel} to \usepackage[english]{babel}
+- Also available at: https://www.overleaf.com/read/vcyttfbpdhwp 
+- Generates PDF/A-2u (validated with veraPDF).
+
+## Voraussetzungen / Prerequisites:
 - LuaLaTex
 - Packages
     - titlesec 

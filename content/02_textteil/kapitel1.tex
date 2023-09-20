@@ -1,6 +1,6 @@
 \chapter{Erstes Kapitel}
 \label{kap:eins}
-Dies ist eine Vorlage für wissenschaftliche Arbeiten an der FHGR nach \textcite{selina_leitfaden_nodate}. Nachfolgend einige Tipps und Funktionen, welche in der Vorlage enthalten sind.
+Dies ist eine Vorlage für wissenschaftliche Arbeiten an der FHGR nach \textcite{stepanenko_leitfaden_2023}\footnote{Quelle aus dem Intranet (nicht öffentlich zugänglich) von FHGR}. Nachfolgend einige Tipps und Funktionen, welche in der Vorlage enthalten sind.
 
 \section{Glossar und Abkürzungen}
 Mit den Befehlen \setminus acrlong\{zb\}, \setminus acrshort\{zb\} oder \setminus acrfull\{zb\} ist das Ausgeben der im Dokument conten/00\_assets/01\_Vorspann/01.4\_abkuerzungsverzeichnis\_glossar.tex Einträgen möglich: \acrlong{zb}, \acrshort{zb}, \acrfull{zb}.
@@ -14,8 +14,8 @@ Für das Zitieren wird die Erweiterung BibLaTeX verwendet. Sämtliche Befehle un
 \setminus parencite\{diani\_black\_2016\} gibt als Ausgabe:\\ 
 \parencite{diani_black_2016}\\
 \\
-\setminus parencites[S. 10]\{diani\_black\_2016\}[S. 20]\{selina\_leitfaden\_nodate\} gibt als Ausgabe:\\ 
-\parencites[S. 10]{diani_black_2016}[S. 20]{selina_leitfaden_nodate}\\
+\setminus parencites[S. 10]\{diani\_black\_2016\}[S. 20]{stepanenko\_leitfaden\_2023} gibt als Ausgabe:\\ 
+\parencites[S. 10]{diani_black_2016}[S. 20]{stepanenko_leitfaden_2023}\\
 \\
 Zusätzlich stehen die folgenden eigens im Template definierten Befehle zur Verfügung:\\
 \\
@@ -28,25 +28,27 @@ Zusätzlich stehen die folgenden eigens im Template definierten Befehle zur Verf
 Zur Formatierung eines Blockzitats kann der Befehl \setminus begin\{quote\} ... \setminus end\{quote\} verwendet werden:
 \begin{quote}
 Blockzitate sind wörtliche Zitate von 40 Wörtern oder mehr; sie werden als eigener Absatz ohne Anführungszeichen angeführt.
-Ein Blockzitat beginnt stets in einer neuen Zeile, wird zur Gänze (also jede Zeile) 1,3 cm oder fünf Leerschritte eingerückt und mit zweizeiligem Abstand geschrieben. Absätze innerhalb eines Blockzitates werden vom neuen Rand des Blockzitates eingerückt. Blockzitate werden nicht in Anführungszeichen gesetzt, darin aufscheinende Zitate werden in doppelten Anführungszeichen wiedergegeben. Die Quellenangabe am Ende eines Blockzitates steht nach dem letzten schließenden Punkt des Zitates in Klammern gesetzt, danach folgt kein weiterer Punkt. \parencite[S. 111]{psychologie_richtlinien_2016}
+Ein Blockzitat beginnt stets in einer neuen Zeile, wird zur Gänze (also jede Zeile) 1,3 cm oder fünf Leerschritte eingerückt und mit zweizeiligem Abstand geschrieben. Absätze innerhalb eines Blockzitates werden vom neuen Rand des Blockzitates eingerückt. Blockzitate werden nicht in Anführungszeichen gesetzt, darin aufscheinende Zitate werden in doppelten Anführungszeichen wiedergegeben. Die Quellenangabe am Ende eines Blockzitates steht nach dem letzten schließenden Punkt des Zitates in Klammern gesetzt, danach folgt kein weiterer Punkt.\\
+\parencite[S. 111]{psychologie_richtlinien_2016}
 \end{quote}
-
 \chapter{Ein Bild}
-\begin{figure}[H]
+
+\begin{fig}{H}
     \includegraphics[width=\textwidth]{alpendohle.jpg}
-    \caption{Eine Alpendohle \parencite{diani_black_2016}}
+    \note{\textcite[Abs. 1]{diani_black_2016}}
+    \caption{Überschrift Abbildung 1}
     \label{fig:alpendohle}
-\end{figure}
+\end{fig}
 
 \chapter{Tabelle}
-Das folgende Beispiel zeit eine Tabelle:
-\begin{table}[ht]
+Im folgenden (Tabelle \ref{tab:tabelle}) ist ein Beispiel einer Tabelle:
+\begin{tab}{ht}
 \begin{tabularx}{\textwidth} {
     >{\raggedright\arraybackslash}X 
     >{\raggedleft\arraybackslash}X 
     >{\raggedleft\arraybackslash}X}
         \hline
-        \multicolumn{3}{c}{\textbf{Tabelle}}\\
+        \multicolumn{3}{c}{\textbf{Beispieltabelle}}\\
         \hline
         \textbf{Linksbündig} & \textbf{Rechtsbündig} & \textbf{Rechtsbündig}\\
         \hline
@@ -57,7 +59,9 @@ Das folgende Beispiel zeit eine Tabelle:
         \hline
         \textbf{Total} & 2 849 & 8 512\\
         \hline
-\end{tabularx}
-\caption{Beispiel einer Tabelle.}
+    \end{tabularx}
+    \par\vspace{.2cm}
+    \caption{Überschrift Tabelle 1}
+    \note{\textcite[Abs. 1]{diani_black_2016}}
     \label{tab:tabelle}
-\end{table}
+\end{tab}

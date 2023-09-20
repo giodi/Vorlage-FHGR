@@ -1,4 +1,4 @@
-\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, caption, subcaption, floatrow, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr}
+\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[addtotoc]{abstract}
@@ -22,12 +22,28 @@
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 
+\floatsetup[figure]{capposition=top}
+\floatsetup[table]{capposition=top}
 \renewcommand{\thetable}{\arabic{table}}
 \renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
-\captionsetup[table]{font={footnotesize},labelfont=it,labelsep=period}
-\captionsetup[figure]{font={footnotesize},labelfont=it,labelsep=period}
-% \captionsetup[subfigure]{font={footnotesize},labelfont=it,labelsep=period,labelformat=simple}
+\captionsetup[table]{
+    font={normalsize,stretch=1.0},
+    labelfont=it,
+    labelsep=none,
+    labelformat=empty,
+    justification=raggedright,
+    singlelinecheck=false,
+    position=top
+}
+\captionsetup[figure]{
+    font={normalsize,stretch=1.0},
+    labelfont=it,
+    labelsep=none,
+    labelformat=empty,
+    justification=raggedright,
+    singlelinecheck=false,
+    position=top
+}
 
 \titleformat{\chapter}[block]{\normalfont\large\bfseries}{\thechapter.}{4pt}{}
 \titlespacing*{\chapter}{0pt}{0pt}{6pt}
@@ -38,8 +54,8 @@
 \setmainfont{Times New Roman}
 
 % Einstellungen für tocloft / Settings for tocloft
-\renewcommand{\cftfigpresnum}{Abb. }
-\renewcommand{\cfttabpresnum}{Tab. }
+\renewcommand{\cftfigpresnum}{Abb.~}
+\renewcommand{\cfttabpresnum}{Tab.~}
 \renewcommand{\cftfigaftersnum}{:}
 \renewcommand{\cfttabaftersnum}{:}
 \setlength{\cftfignumwidth}{2cm}
@@ -60,10 +76,31 @@
 \usepackage{embedfile}
 \pdfvariable omitcidset=1
 
+\newenvironment{fig}[1]{%
+    \textbf{Abbildung \the\numexpr\value{figure}+1\relax}
+    \par\vspace{-.3cm}
+    \begin{figure}[#1]
+    \par\vspace{-.3cm}
+    \raggedright
+}{\end{figure}}
+
+\newenvironment{tab}[1]{%
+    \newline
+    \textbf{Tabelle \the\numexpr\value{table}+1\relax}
+    \par\vspace{-.3cm}
+    \begin{table}[#1]
+    \par\vspace{-.3cm}
+    \raggedright
+}{\end{table}}
+
 % 
 \newcommand{\chapterNoNr}[1]{%
     \chapter*{#1}
     \addcontentsline{toc}{chapter}{#1} %
+}%
+
+\newcommand{\note}[1]{%
+    \footnotesize{\textit{Anmerkung:} #1}
 }%
 
 \hypersetup{%

@@ -5,7 +5,7 @@
 - Auch verfügbar unter: https://www.overleaf.com/read/vcyttfbpdhwp 
 - Generiert PDF/A-2u (Mit veraPDF validiert)
 
-## Voraussetzungen:
+## Voraussetzungen / Prerequisits:
 - LuaLaTex
 - Packages
     - titlesec 

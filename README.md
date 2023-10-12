@@ -17,6 +17,9 @@
 - Also available at: https://www.overleaf.com/read/vcyttfbpdhwp 
 - Generates PDF/A-2u (validated with veraPDF).
 
+# Version
+[Weisung über Studien- und Abschlussarbeiten V01.03 (28.06.2023)](https://my.fhgr.ch/download/17597)
+
 ## Voraussetzungen / Prerequisites:
 - LuaLaTex
 - Packages

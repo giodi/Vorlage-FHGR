@@ -17,6 +17,16 @@
 - Also available at: https://www.overleaf.com/read/vcyttfbpdhwp 
 - Generates PDF/A-2u (validated with veraPDF).
 
+# Versionen
+
+| Dokument                                                       | Version | Datum      | Link                              |
+| -------------------------------------------------------------- | ------- | ---------- | --------------------------------- |
+| Leitfaden zum wissenschaftlichen Arbeiten an der FH Graubünden | V01.00  | 02.08.2023 | https://my.fhgr.ch/download/18740 |
+| Merkblatt wiss. Arbeiten für Studierende                       | V01.00  | 02.08.2023 | https://my.fhgr.ch/download/18742 |
+| Weisung über Studien- und Abschlussarbeiten                    | V01.03  | 28.06.2023 | https://my.fhgr.ch/download/17597 |
+
+
+
 ## Voraussetzungen / Prerequisites:
 - LuaLaTex
 - Packages

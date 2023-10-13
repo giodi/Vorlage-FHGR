@@ -1,4 +1,4 @@
-\usepackage{titlesec, fontspec, setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr}
+\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr, ifthen}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[addtotoc]{abstract}
@@ -24,8 +24,7 @@
 
 \floatsetup[figure]{capposition=top}
 \floatsetup[table]{capposition=top}
-\renewcommand{\thetable}{\arabic{table}}
-\renewcommand{\thefigure}{\arabic{figure}}
+
 \captionsetup[table]{
     font={normalsize,stretch=1.0},
     labelfont=it,
@@ -45,16 +44,8 @@
     position=top
 }
 
-\titleformat{\chapter}[block]{\normalfont\large\bfseries}{\thechapter.}{4pt}{}
-\titlespacing*{\chapter}{0pt}{0pt}{6pt}
-\titleformat{\section}[block]{\normalfont\normalsize\bfseries}{\thesection.}{4pt}{}
-\titlespacing*{\section}{0pt}{6pt}{6pt}
-\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection.}{4pt}{}
-\titlespacing*{\subsection}{0pt}{6pt}{6pt}
-
-% Adjustments for fonts
-\input{head/styles/arial} % uncomment this line for arial
-% \input{head/styles/times_new_roman} % uncomment this line for times new roman
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 % Einstellungen für tocloft / Settings for tocloft
 \renewcommand{\cftfigpresnum}{Abb.~}

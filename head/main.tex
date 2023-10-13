@@ -1,12 +1,10 @@
 \directlua{pdf.setminorversion(7)}
 \directlua{pdf.inclusioncopyfonts(1)}
-\documentclass[a4paper,11pt]{extreport} % Uncomment this line for Arial
-% \documentclass[a4paper,12pt]{extreport} % Uncomment this line for Times New Roman
+\documentclass{arialFHGR}
 \input{head/metadata}
 \input{head/preamble}
 \begin{document}
-\renewcommand{\figurename}{Abb.}
-\renewcommand{\tablename}{Tab.}
+
 \renewcommand*\listfigurename{\normalfont\large\bfseries{Abbildungsverzeichnis}}
 \renewcommand*\listtablename{\normalfont\large\bfseries{Tabellenverzeichnis}}
 \renewcommand*\contentsname{\normalfont\large\bfseries{Inhaltsverzeichnis}}

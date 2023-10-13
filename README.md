@@ -3,7 +3,9 @@
 - LaTeX Vorlage für wissenschaftliche Arbeiten an der Fachhochschule Graubünden.
 - Verzeichnissstruktur:
     - content: Arbeit verfassen.
-    - head: In metadata.tex Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
+    - head:
+        - In metadata.tex Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
+        - In main.tex kann via `\documentclass{arialFHGR}` oder `\documentclass{timesFHGR}` die Arial oder Times New Roman Version eingestellt werden.
 - Auch verfügbar unter: https://www.overleaf.com/read/vcyttfbpdhwp 
 - Generiert PDF/A-2u (Mit veraPDF validiert).
 
@@ -11,7 +13,9 @@
 - LaTeX template for scientific work at the University of Applied Sciences Graubünden.
 - Folder structure:
     - content: Writing the paper.
-    - head: Enter information in metadata.tex. Used for PDF metadata and cover page.
+    - head:
+        - Enter information in metadata.tex. Used for PDF metadata and cover page.
+        - In main.tex you can choose between the Times New Roman and Arial Version by setting \documentclass{arialFHGR} or \documentclass{timesFHGR}
 - If a paper is written in English, change the following:
     - In head/preamble.tex change \usepackage[english, nswissgerman]{babel} to \usepackage[english]{babel}
 - Also available at: https://www.overleaf.com/read/vcyttfbpdhwp 

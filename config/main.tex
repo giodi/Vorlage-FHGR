@@ -5,10 +5,10 @@
 \input{config/preamble}
 \begin{document}
 
-    \renewcommand*\listfigurename{\customTitle{}}
-    \renewcommand*\listtablename{\customTitle{}}
+    \renewcommand*\listfigurename{\customTitle{Abbildungsverzeichnis}}
+    \renewcommand*\listtablename{\customTitle{Tabellenverzeichnis}}
     \renewcommand*\contentsname{\customTitle{Inhaltsverzeichnis}}
-    \renewcommand*{\acronymname}{\customTitle{}}
+    \renewcommand*{\acronymname}{\customTitle{Abkürzungsverzeichnis}}
     
     % Start Vorspann
     
@@ -22,20 +22,27 @@
     \begingroup
         \renewcommand*{\addvspace}[1]{}
         
-        \newpage
-        \pagenumbering{arabic} 
-        \chapterNoNr{Abbildungsverzeichnis}
-    	\listoffigures % Abbildungsverzeichnis
+        \pagenumbering{arabic}
+        
+        % Abbildungsverzeichnis
+        \cleardoublepage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+    	\listoffigures
      
-    	\newpage
-        \chapterNoNr{Tabellenverzeichnis}
-    	\listoftables % Tabellenverzeichnis
+        % Tabellenverzeichnis
+        \cleardoublepage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+    	\listoftables
     \endgroup
 
     % Settings table of acronyms
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
     \setacronymstyle{long-short}
     \setglossarystyle{listdotted}
-    \chapterNoNr{Abkürzungsverzeichnis}
     \printnoidxglossary[type=\acronymtype]
     \include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
     

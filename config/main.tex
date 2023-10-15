@@ -24,24 +24,18 @@
         
         \newpage
         \pagenumbering{arabic} 
-        \phantomsection
-        \addcontentsline{toc}{chapter}{\protect
-        \numberline{}Abbildungsverzeichnis}
+        \chapterNoNr{Abbildungsverzeichnis}
     	\listoffigures % Abbildungsverzeichnis
      
     	\newpage
-        \phantomsection
-        \addcontentsline{toc}{chapter}{\protect
-        \numberline{}Tabellenverzeichnis}
+        \chapterNoNr{Tabellenverzeichnis}
     	\listoftables % Tabellenverzeichnis
     \endgroup
 
     % Settings table of acronyms
     \setacronymstyle{long-short}
     \setglossarystyle{listdotted}
-    \phantomsection
-    \addcontentsline{toc}{chapter}{\protect
-    \numberline{}Abkürzungsverzeichnis}
+    \chapterNoNr{Abkürzungsverzeichnis}
     \printnoidxglossary[type=\acronymtype]
     \include{content/01_vorspann/01.4_abkuerzungsverzeichnis}
     

@@ -16,17 +16,31 @@
     \input{content/01_vorspann/01.1_titelblatt}
     \include{content/01_vorspann/01.2_abstract}
     \include{content/01_vorspann/01.3_vorwort}
-    \setcounter{page}{2}
+
     \tableofcontents % Inhaltsverzeichnis
+    
     \begingroup
         \renewcommand*{\addvspace}[1]{}
-        \newpage
-    	\listoffigures % Abbildungsverzeichnis
-    	\newpage
-    	\listoftables % Tabellenverzeichnis
+        
+        \pagenumbering{arabic}
+        
+        % Abbildungsverzeichnis
+        \cleardoublepage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+    	\listoffigures
+     
+        % Tabellenverzeichnis
+        \cleardoublepage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+    	\listoftables
     \endgroup
 
     % Settings table of acronyms
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
     \setacronymstyle{long-short}
     \setglossarystyle{listdotted}
     \printnoidxglossary[type=\acronymtype]
@@ -34,7 +48,6 @@
     % Ende Vorspann
     
     % Start Textteil
-    \pagenumbering{arabic} 
     \include{content/02_textteil/einleitung}
     \include{content/02_textteil/kapitel1}
     % Ende Textteil

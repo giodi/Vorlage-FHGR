@@ -14,4 +14,3 @@
 \titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection.}{4pt}{}
 \titlespacing*{\subsection}{0pt}{6pt}{6pt}
 
-\newcommand{\customTitle}[1]{\normalfont\large\bfseries{#1}}

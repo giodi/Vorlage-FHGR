@@ -1,16 +1,22 @@
-\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, tocloft, xstring, hyphenat, chngcntr}
+\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
 \usepackage[autostyle]{csquotes}
 \usepackage[english, nswissgerman]{babel}
-\usepackage[acronym]{glossaries}
+\usepackage[titles]{tocloft}
 
-\makenoidxglossaries
-\input{content/01_vorspann/01.4_abkuerzungsverzeichnis_glossar}
+% Settings for glossary
+\usepackage[acronym,toc=true,xindy,nopostdot=true,nonumberlist,nogroupskip=true]{glossaries}
+\loadglsentries{content/01_vorspann/01.4_abkuerzungsverzeichnis_glossar}
+\setglossarystyle{alttree}
+\setglossarypreamble[acronym]{\vspace*{-8pt}}
+\makeglossaries
+\glsaddall
+\glsfindwidesttoplevelname
 
-\graphicspath{{content/00_assets}}
-\addbibresource{content/00_assets/quellen.bib}
+\graphicspath{{content/00_assets}} % Set path as default for including graphics
+\addbibresource{content/00_assets/quellen.bib} % Add bibliography entries
 
 % cite with acronym. 
 % Example input: \citeAbbr{schweizerische_archivdirektorinnen-_und_archivdirektorenkonferenz_informations-_2018}{adk}

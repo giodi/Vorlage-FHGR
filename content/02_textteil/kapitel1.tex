@@ -3,7 +3,7 @@
 Dies ist eine Vorlage für wissenschaftliche Arbeiten an der FHGR nach \textcite{stepanenko_leitfaden_2023}\footnote{Quelle aus dem Intranet (nicht öffentlich zugänglich) von FHGR}. Nachfolgend einige Tipps und Funktionen, welche in der Vorlage enthalten sind.
 
 \section{Glossar und Abkürzungen}
-Mit den Befehlen \setminus acrlong\{zb\}, \setminus acrshort\{zb\} oder \setminus acrfull\{zb\} ist das Ausgeben der im Dokument conten/00\_assets/01\_Vorspann/01.4\_abkuerzungsverzeichnis\_glossar.tex Einträgen möglich: \acrlong{zb}, \acrshort{zb}, \acrfull{zb}.
+Mit den Befehlen \setminus acrlong\{zb\}, \setminus acrshort\{zb\} oder \setminus acrfull\{zb\} ist das Ausgeben der im Dokument conten/00\_assets/01\_Vorspann/01.4\_abkuerzungsverzeichnis\_glossar.tex Einträgen möglich: \acrshort{zb}, \acrshort{zb}, \acrfull{zb}.
 
 \section{Zitieren}
 Für das Zitieren wird die Erweiterung BibLaTeX verwendet. Sämtliche Befehle und Funktionen des Pakets können im Handbuch nachgeschlagen werden\footnote{https://mirror.metanet.ch/tex-archive/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf}. Voraussetzung ist, dass die Quellen erst im BibLaTeX Format unter content/00\_assets/quellen.bib abgelegt sind (z. B. via Zotero, Mendely oder als Datei). Nachfolgend Beispiele mit den üblichsten Befehlen:\\
@@ -43,22 +43,22 @@ Ein Blockzitat beginnt stets in einer neuen Zeile, wird zur Gänze (also jede Ze
 \chapter{Tabelle}
 Im folgenden (Tabelle \ref{tab:tabelle}) ist ein Beispiel einer Tabelle:
 \begin{tab}{ht}
-\begin{tabularx}{\textwidth} {
-    >{\raggedright\arraybackslash}X 
-    >{\raggedleft\arraybackslash}X 
-    >{\raggedleft\arraybackslash}X}
-        \hline
-        \multicolumn{3}{c}{\textbf{Beispieltabelle}}\\
-        \hline
-        \textbf{Linksbündig} & \textbf{Rechtsbündig} & \textbf{Rechtsbündig}\\
-        \hline
-        Lorem & N/A & N/A\\
-        Ipsum & 1 499 & 8 512\\
-        Dolor & 297 & N/A\\
-        Sit & 1 053 & N/A\\
-        \hline
-        \textbf{Total} & 2 849 & 8 512\\
-        \hline
+    \begin{tabularx}{\textwidth} {
+        >{\raggedright\arraybackslash}X 
+        >{\raggedleft\arraybackslash}X 
+        >{\raggedleft\arraybackslash}X}
+            \hline
+            \multicolumn{3}{c}{\textbf{Beispieltabelle}}\\
+            \hline
+            \textbf{Linksbündig} & \textbf{Rechtsbündig} & \textbf{Rechtsbündig}\\
+            \hline
+            Lorem & N/A & N/A\\
+            Ipsum & 1 499 & 8 512\\
+            Dolor & 297 & N/A\\
+            Sit & 1 053 & N/A\\
+            \hline
+            \textbf{Total} & 2 849 & 8 512\\
+            \hline
     \end{tabularx}
     \par\vspace{.2cm}
     \caption{Überschrift Tabelle 1}

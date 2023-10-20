@@ -2,7 +2,10 @@
 - English below
 - LaTeX Vorlage für wissenschaftliche Arbeiten an der Fachhochschule Graubünden.
 - Verzeichnissstruktur:
-@@ -9,51 +9,27 @@
+- content: Arbeit verfassen.
+    - head:
+        - In metadata.tex Angaben erfassen. Werden für PDF Metadaten und Titelblatt verwendet.
+        - In main.tex kann via `\documentclass{arialFHGR}` oder `\documentclass{timesFHGR}` die Arial oder Times New Roman Version eingestellt werden.
 - Auch verfügbar unter: https://www.overleaf.com/read/vcyttfbpdhwp 
 - Generiert PDF/A-2u (Mit veraPDF validiert).
 

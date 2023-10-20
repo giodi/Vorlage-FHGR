@@ -159,4 +159,4 @@ Neue [Issues](https://github.com/giodi/Vorlage-FHGR/issues) können über GitHub
 
 ### Pull Requests <!-- omit in toc -->
 
-Wer einen [Issue](https://github.com/giodi/Vorlage-FHGR/issues) gefixt, ein neues Feature hinzugefügt oder etwas einer Vorgabe angepasst hat, kann gerne einen Pull Request stellen.
+Wer einen [Issue](https://github.com/giodi/Vorlage-FHGR/issues) gefixt, ein neues Feature hinzugefügt oder etwas einer Vorgabe angepasst hat, kann gerne einen [Pull Request](https://github.com/marcgauch/Vorlage-FHGR/pulls) stellen.

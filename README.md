@@ -10,11 +10,10 @@
   - [2.4. Struktur der Dateien](#24-struktur-der-dateien)
   - [2.5. Einstellungen](#25-einstellungen)
     - [2.5.1. Deutsch oder Englisch](#251-deutsch-oder-englisch)
-      - [2.5.1.1. In der Vorlage](#2511-in-der-vorlage)
-      - [2.5.1.2. Im Overleaf](#2512-im-overleaf)
     - [2.5.2. Arial oder Times New Roman](#252-arial-oder-times-new-roman)
 - [3. Versionen](#3-versionen)
-- [4. Voraussetzungen / Prerequisites:](#4-voraussetzungen--prerequisites)
+- [4. Voraussetzungen](#4-voraussetzungen)
+- [5. Mithilfe](#5-mithilfe)
 
 ## 1. Was macht diese Vorlage
 
@@ -26,13 +25,13 @@ Die Vorlage kann direkt auf Overleaf unter https://www.overleaf.com/read/vcyttfb
 
 ### 2.1. Projekt kopieren
 
-| Schritt | Beschreibung                                                                                                                                                           | Bild                                                        |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 1       | [Login](https://www.overleaf.com/login) in to your overleaf account. If you do not have one yet create one [here](https://www.overleaf.com/register) and then sign in. |
-| 2       | Open the [example project](https://www.overleaf.com/read/vcyttfbpdhwp) at [Overleaf](https://www.overleaf.com)                                                         | ![Alt text](documentation/overleaf.png)                     |
-| 3       | Click on the _Menu_ button                                                                                                                                             | ![Alt text](documentation/overleaf-menu.png)                |
-| 4       | In the sidebar click on _Copy Project_                                                                                                                                 | ![Alt text](documentation/overleaf-copy-project.png)        |
-| 5       | Give the project a name. Then continue with _Copy_. Wait a few seconds. Your new project will load and you can begin writing.                                          | ![Alt text](documentation/overleaf-copy-project-dialog.png) |
+| Schritt | Beschreibung                                                                                                                                                      | Bild                                                                   |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| 1       | [Anmelden](https://www.overleaf.com/login) in den Overleaf-Account. Falls noch keiner vorhanden [hier](https://www.overleaf.com/register) erstellen und Anmelden. |
+| 2       | Das [Beispielprojekt](https://www.overleaf.com/read/vcyttfbpdhwp) auf [Overleaf](https://www.overleaf.com) öffnen.                                                | ![Übersicht Overleaf](documentation/overleaf.png)                      |
+| 3       | Auf _Menu_ klicken.                                                                                                                                               | ![Verkleinerte Menüansicht](documentation/overleaf-menu.png)           |
+| 4       | In der Sidebar auf _Copy Project_ klicken.                                                                                                                        | ![Ausschnitt Sidebar](documentation/overleaf-copy-project.png)         |
+| 5       | Einen Namen angeben. Dann auf _Copy_ klicken und kurz warten. Das neue Projekt lädt und mit dem Schreiben beginnen.                                               | ![Copy-Project Dialog](documentation/overleaf-copy-project-dialog.png) |
 
 ### 2.2. LaTeX
 
@@ -82,7 +81,7 @@ Im Beispielprojekt ist einiges zur Verwendung des Projektes beschrieben.
 
 Beide folgenden Änderungen müssen vorgenommen werden:
 
-##### 2.5.1.1. In der Vorlage
+##### 2.5.1.1. In der Vorlage <!-- omit in toc -->
 
 Um die Sprache umzustellen in der Datei `head/preamble.tex` die Zeile
 
@@ -98,12 +97,12 @@ zu
 
 ändern. Standardmässig ist _deutsch_ ausgewählt.
 
-##### 2.5.1.2. Im Overleaf
+##### 2.5.1.2. Im Overleaf <!-- omit in toc -->
 
-| Schritt | Beschreibung                   | Bild                                             |
-| ------- | ------------------------------ | ------------------------------------------------ |
-| 1       | Click on the _Menu_ button     | ![Alt text](documentation/overleaf-menu.png)     |
-| 2       | Die Spracheinstellung wechseln | ![Alt text](documentation/overleaf-language.png) |
+| Schritt | Beschreibung                   | Bild                                                                                            |
+| ------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| 1       | Auf _Menu_ klicken             | ![Verkleinerte Menüansicht](documentation/overleaf-menu.png)                                    |
+| 2       | Die Spracheinstellung wechseln | ![Seitenansicht mit hervorgehobenem Element "Spell check"](documentation/overleaf-language.png) |
 
 #### 2.5.2. Arial oder Times New Roman
 
@@ -129,9 +128,21 @@ zu
 | Merkblatt wiss. Arbeiten für Studierende                       | V01.00  | 02.08.2023 | https://my.fhgr.ch/download/18742 |
 | Weisung über Studien- und Abschlussarbeiten                    | V01.03  | 28.06.2023 | https://my.fhgr.ch/download/17597 |
 
-## 4. Voraussetzungen / Prerequisites:
+## 4. Voraussetzungen
 
-| Type     | Prerequisite                                                                                                                                                                                                               |
+| Typ      | Voraussetzung                                                                                                                                                                                                              |
 | -------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Compiler | LuaLaTeX                                                                                                                                                                                                                   |
 | Packages | setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr, geometry, biblatex, csquotes, babel, tocloft, glossaries, hyperref, hyperxmp, embedfile |
+
+## 5. Mithilfe
+
+Ist willkommen. Alle können helfen.
+
+### Issues <!-- omit in toc -->
+
+Neue [Issues](https://github.com/giodi/Vorlage-FHGR/issues) können über GitHub [hier](https://github.com/giodi/Vorlage-FHGR/issues/new) erstellt werden. Eine kurze Beschreibung was nicht geht oder wie es sein sollte anfügen.
+
+### Pull Requests <!-- omit in toc -->
+
+Wer einen [Issue](https://github.com/giodi/Vorlage-FHGR/issues) gefixt, ein neues Feature hinzugefügt oder etwas einer Vorgabe angepasst hat, kann gerne einen Pull Request stellen.

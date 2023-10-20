@@ -41,11 +41,9 @@
 | 2    | Open the [example project](https://www.overleaf.com/read/vcyttfbpdhwp) at [Overleaf](https://www.overleaf.com)                                                         | ![Alt text](image-4.png) |
 | 3    | Click on the _Menu_ button                                                                                                                                             | ![Alt text](image-1.png) |
 | 4    | In the sidebar click on _Copy Project_                                                                                                                                 | ![Alt text](image.png)   |
-| 5    | Give the project a name. Then continue with *Copy*. Wait a few seconds. Your new project will load and you can begin writing.                                                                                                                                                | ![Alt text](image-2.png) 
-
+| 5    | Give the project a name. Then continue with _Copy_. Wait a few seconds. Your new project will load and you can begin writing.                                          | ![Alt text](image-2.png) |
 
 ## German or English
-
 
 ## Versionen
 

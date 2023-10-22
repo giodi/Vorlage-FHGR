@@ -1,4 +1,4 @@
-\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr}
+\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr, xspace}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
@@ -100,6 +100,10 @@
 
 \newcommand{\note}[1]{%
     \footnotesize{\textit{Anmerkung:} #1}
+}%
+
+\newcommand{\sic}{%
+    [\textit{sic}]\xspace
 }%
 
 \hypersetup{%

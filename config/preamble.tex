@@ -24,6 +24,13 @@
 \newcommand{\textciteabbr}[2]{\acrlong{#2} (\acrshort{#2}, \citeyear{#1})}
 \newcommand{\acrfullSqBr}[1]{\acrlong{#1} [\acrshort{#1}]}
 
+% Settings for blockquote
+\SetBlockEnvironment{quotation}
+\patchcmd{\quotation}{\rightmargin}{\leftmargin 1.3cm \rightmargin 0}{}{}
+\NewCommandCopy{\oldblockquote}{\blockquote}
+\renewcommand{\blockquote}[1]{\oldblockquote{\noindent #1}}
+
+% Settings for figure and table
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 

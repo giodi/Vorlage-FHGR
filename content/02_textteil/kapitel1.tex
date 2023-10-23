@@ -36,17 +36,17 @@ Um in einem wörtlichen Zitat auf Fehler hinzuweisen kann der Befehl \setminus s
 
 
 \chapter{Ein Bild}
-
-\begin{fig}{H}
+\begin{figure}[H]
+    \caption{Überschrift Abbildung 1}
     \includegraphics[width=\textwidth]{alpendohle.jpg}
     \note{\textcite[Abs. 1]{diani_black_2016}}
-    \caption{Überschrift Abbildung 1}
     \label{fig:alpendohle}
-\end{fig}
+\end{figure}
 
 \chapter{Tabelle}
 Im folgenden (Tabelle \ref{tab:tabelle}) ist ein Beispiel einer Tabelle:
-\begin{tab}{ht}
+\begin{table}[ht]
+    \caption{Überschrift Tabelle 1}
     \begin{tabularx}{\textwidth} {
         >{\raggedright\arraybackslash}X 
         >{\raggedleft\arraybackslash}X 
@@ -64,8 +64,7 @@ Im folgenden (Tabelle \ref{tab:tabelle}) ist ein Beispiel einer Tabelle:
             \textbf{Total} & 2 849 & 8 512\\
             \hline
     \end{tabularx}
-    \par\vspace{.2cm}
-    \caption{Überschrift Tabelle 1}
+    \medbreak
     \note{\textcite[Abs. 1]{diani_black_2016}}
     \label{tab:tabelle}
-\end{tab}
+\end{table}

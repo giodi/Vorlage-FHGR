@@ -27,26 +27,44 @@
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 
-\floatsetup[figure]{capposition=top}
-\floatsetup[table]{capposition=top}
+\floatsetup[figure]{
+    capposition=above,
+    captionskip=2pt
+}
+
+\DeclareCaptionLabelFormat{figTitle}{%
+    Abbildung \the\numexpr\value{figure}+1\relax\\
+}
+
+\captionsetup[figure]{
+    font={normalsize,stretch=1.0},
+    labelfont=bf,
+    labelsep=none,
+    labelformat=figTitle,
+    textfont=it,
+    justification=raggedright,
+    singlelinecheck=false,
+    position=above,
+}
+
+\floatsetup[table]{
+    capposition=above,
+    captionskip=2pt
+}
+
+\DeclareCaptionLabelFormat{tabTitle}{%
+    Tabelle \the\numexpr\value{table}+1\relax \\
+} 
 
 \captionsetup[table]{
     font={normalsize,stretch=1.0},
-    labelfont=it,
+    labelfont={bf},
     labelsep=none,
-    labelformat=empty,
+    labelformat=tabTitle,
+    textfont=it,
     justification=raggedright,
     singlelinecheck=false,
-    position=top
-}
-\captionsetup[figure]{
-    font={normalsize,stretch=1.0},
-    labelfont=it,
-    labelsep=none,
-    labelformat=empty,
-    justification=raggedright,
-    singlelinecheck=false,
-    position=top
+    position=above
 }
 
 \renewcommand{\thetable}{\arabic{table}}
@@ -75,23 +93,6 @@
 \usepackage{embedfile}
 \pdfvariable omitcidset=1
 
-\newenvironment{fig}[1]{%
-    \textbf{Abbildung \the\numexpr\value{figure}+1\relax}
-    \par\vspace{-.3cm}
-    \begin{figure}[#1]
-    \par\vspace{-.3cm}
-    \raggedright
-}{\end{figure}}
-
-\newenvironment{tab}[1]{%
-    \newline
-    \textbf{Tabelle \the\numexpr\value{table}+1\relax}
-    \par\vspace{-.3cm}
-    \begin{table}[#1]
-    \par\vspace{-.3cm}
-    \raggedright
-}{\end{table}}
-
 % 
 \newcommand{\chapterNoNr}[1]{%
     \chapter*{#1}
@@ -99,7 +100,7 @@
 }%
 
 \newcommand{\note}[1]{%
-    \footnotesize{\textit{Anmerkung:} #1}
+    \raggedright\footnotesize{\textit{Anmerkung:} #1}
 }%
 
 \newcommand{\sic}{%

@@ -1,4 +1,4 @@
-\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr, xspace}
+\usepackage{setspace, fancyhdr, lscape, floatrow, caption, inputenc, graphicx, enumitem, tabularx, colorprofiles, xstring, hyphenat, chngcntr, xspace, listings}
 
 \usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage[backend=biber,style=apa,citestyle=apa]{biblatex}
@@ -23,6 +23,21 @@
 \newcommand{\parenciteabbr}[2]{(\acrlong{#2} [\acrshort{#2}], \citeyear{#1})}
 \newcommand{\textciteabbr}[2]{\acrlong{#2} (\acrshort{#2}, \citeyear{#1})}
 \newcommand{\acrfullSqBr}[1]{\acrlong{#1} [\acrshort{#1}]}
+
+% Settings for listings
+\lstdefinestyle{codeStyle}{
+    belowcaptionskip=6pt,
+    belowskip=3pt,
+    breaklines=true,
+    numbers=left,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    captionpos=t,
+    numberbychapter=false,
+    xleftmargin=4pt,
+    xrightmargin=4pt
+}
+\lstset{style=codeStyle}
 
 % Settings for blockquote
 \SetBlockEnvironment{quotation}
@@ -68,6 +83,26 @@
     labelfont={bf},
     labelsep=none,
     labelformat=tabTitle,
+    textfont=it,
+    justification=raggedright,
+    singlelinecheck=false,
+    position=above
+}
+
+\floatsetup[lstlisting]{
+    capposition=above,
+    captionskip=2pt
+}
+
+\DeclareCaptionLabelFormat{codeTitle}{%
+    Programmcode \the\numexpr\value{lstlisting}\relax \\
+} 
+
+\captionsetup[lstlisting]{
+    font={normalsize,stretch=1.0},
+    labelfont={bf},
+    labelsep=none,
+    labelformat=codeTitle,
     textfont=it,
     justification=raggedright,
     singlelinecheck=false,

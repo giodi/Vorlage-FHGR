@@ -64,3 +64,13 @@ Im folgenden (Tabelle \ref{tab:tabelle}) ist ein Beispiel einer Tabelle:
     \note{\textcite[Abs. 1]{diani_black_2016}}
     \label{tab:tabelle}
 \end{table}
+
+\chapter{Programmcode}
+Programmcode ist immer öfter Bestandteil von Studienarbeiten. Die \textcite{American_Psychological_Association_2022} schreibt zur Formatierung von Passagen mit Porgrammcode: "<To present computer code, use a monospace font such as 10-point Lucida Console or 10-point Courier New">. Im Fliesstext könnte dies folgendermassen aussehen: Die Funktion \lstinline{print()} in der Programmiersprache Python wird meist dazu benutzt, Text auf dem Bildschirm auszugeben. Das folgende Beispiel \ref{code:hello} gibt die Zeichenkette "<Hello World"> aus.
+\begin{lstlisting}[language=Python,caption=Überschrift Programmcode,label=code:hello] 
+# hello_world.py
+print("Hello World!")
+\end{lstlisting}
+\medbreak
+\noindent
+Weitere Konfigurationsmöglichkeiten für die Darstellung von Programmcode können der Dokumentation\footnote{http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf} des \texttt{lstlisting} Pakets entnommen werden. 

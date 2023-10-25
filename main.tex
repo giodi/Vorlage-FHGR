@@ -9,6 +9,7 @@
     \renewcommand{\listfigurename}{Abbildungsverzeichnis}
     \renewcommand{\listtablename}{Tabellenverzeichnis}
     \renewcommand{\acronymname}{Abkürzungsverzeichnis}
+    \renewcommand{\lstlistlistingname}{Programmcodeverzeichnis}
     
     % Start Vorspann
     
@@ -34,6 +35,12 @@
 
     % List of acronyms
     \printglossary[type=\acronymtype]
+
+    % List of code
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \lstlistoflistings
     
     % Ende Vorspann
     

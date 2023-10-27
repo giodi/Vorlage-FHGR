@@ -1,2 +1,15 @@
-\chapter{Anhang}
-Sit amet mattis vulputate enim nulla aliquet. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Turpis egestas integer eget aliquet nibh praesent. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sem viverra aliquet eget sit. Id leo in vitae turpis massa sed elementum tempus egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Eget sit amet tellus cras adipiscing enim eu turpis. Pulvinar neque laoreet suspendisse interdum consectetur libero. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Amet purus gravida quis blandit turpis cursus in hac habitasse. In aliquam sem fringilla ut morbi tincidunt augue. Tellus molestie nunc non blandit massa enim nec. Mi eget mauris pharetra et ultrices neque.
+\chapter{Einseitiges PDF einbinden}
+Es ist möglich, PDF als Grafiken einzubinden. Hier ein Beispiel:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{content/00_assets/example.pdf}
+    \caption{Beispiel für Einbindung von PDF-Dateien}
+    \label{fig:enter-label}
+    \note{Grafik von https://www.rawgraphs.io/}
+\end{figure}
+
+\chapter{Mehrseitiges PDF einbinden}
+Das Einbinden mehrseitiger PDF ist mittels des \lstinline{pdfpages} Pakets\footnote{https://www.ctan.org/pkg/pdfpages} möglich. Mit dem folgenden Befehl werden die Seiten 9, 15, 25 und 48-50 aus dem books-of-bread PDF eingebunden \parencite{simmons_book_1903}: \\
+\lstinline|\includepdf[pages={9,15,25,48-50}]{content/00_assets/book-of-bread.pdf}|
+
+\includepdf[pages={9,15,25,48-50}]{content/00_assets/book-of-bread.pdf}

@@ -24,6 +24,8 @@
 \newcommand{\textciteabbr}[2]{\acrlong{#2} (\acrshort{#2}, \citeyear{#1})}
 \newcommand{\acrfullSqBr}[1]{\acrlong{#1} [\acrshort{#1}]}
 
+\setmonofont{Courier New}
+
 % Settings for listings
 \lstdefinestyle{codeStyle}{
     belowcaptionskip=6pt,
@@ -31,6 +33,7 @@
     breaklines=true,
     numbers=left,
     basicstyle=\footnotesize\ttfamily,
+    extendedchars=true,
     frame=single,
     captionpos=t,
     numberbychapter=false,

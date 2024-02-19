@@ -23,7 +23,7 @@ Die Vorlage ist in [LaTeX](https://de.wikipedia.org/wiki/LaTeX) geschrieben. Um 
 
 | Dokument                                                       | Version | Datum      | Link                              |
 | -------------------------------------------------------------- | ------- | ---------- | --------------------------------- |
-| Leitfaden zum wissenschaftlichen Arbeiten an der FH Graubünden | V01.00  | 02.08.2023 | https://my.fhgr.ch/download/18740 |
+| Leitfaden zum wissenschaftlichen Arbeiten an der FH Graubünden | V01.10  | 07.02.2024 | https://my.fhgr.ch/download/18740 |
 | Merkblatt wiss. Arbeiten für Studierende                       | V01.00  | 02.08.2023 | https://my.fhgr.ch/download/18742 |
 | Weisung über Studien- und Abschlussarbeiten                    | V01.03  | 28.06.2023 | https://my.fhgr.ch/download/17597 |
 

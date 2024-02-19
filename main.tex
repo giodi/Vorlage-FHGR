@@ -24,7 +24,6 @@
     \cleardoublepage
     \phantomsection
     \addcontentsline{toc}{chapter}{\listfigurename}
-    \pagenumbering{arabic} % Begin arabic pagenumbering
     \listoffigures
     
     % List of tables
@@ -41,10 +40,11 @@
     \phantomsection
     \addcontentsline{toc}{chapter}{\lstlistlistingname}
     \lstlistoflistings
-    
+    \newpage
     % Ende Vorspann
     
     % Start Textteil
+    \pagenumbering{arabic} % Begin arabic pagenumbering
     \include{content/02_textteil/einleitung}
     \include{content/02_textteil/kapitel1}
     % Ende Textteil

@@ -1,6 +1,7 @@
 \directlua{pdf.setminorversion(7)}
 \directlua{pdf.inclusioncopyfonts(1)}
-\documentclass{arialFHGR} % use either arialFHGR or timesFHGR
+%\documentclass{arialFHGR} % use either arialFHGR or timesFHGR
+\documentclass{timesFHGR}
 \input{config/metadata}
 \input{config/preamble}
 \begin{document}
@@ -14,7 +15,12 @@
     % Start Vorspann
     
     \pagenumbering{Roman} % Begin roman pagenumbering
-    \input{content/01_vorspann/01.1_titelblatt}
+
+    % Titelblatt für eine Studienarbeit
+     \input{content/01_vorspann/01.1a_titelblatt_studienarbeit}
+    % ODER für eine Abschlussarbeit
+    % \input{content/01_vorspann/01.1b_titelblatt_abschlussarbeit}
+    
     \include{content/01_vorspann/01.2_abstract}
     \include{content/01_vorspann/01.3_vorwort}
 

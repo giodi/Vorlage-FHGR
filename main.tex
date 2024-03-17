@@ -1,7 +1,6 @@
 \directlua{pdf.setminorversion(7)}
 \directlua{pdf.inclusioncopyfonts(1)}
-%\documentclass{arialFHGR} % use either arialFHGR or timesFHGR
-\documentclass{timesFHGR}
+\documentclass{arialFHGR} % use either arialFHGR or timesFHGR
 \input{config/metadata}
 \input{config/preamble}
 \begin{document}
@@ -20,7 +19,7 @@
      \input{content/01_vorspann/01.1a_titelblatt_studienarbeit}
     % ODER für eine Abschlussarbeit
     % \input{content/01_vorspann/01.1b_titelblatt_abschlussarbeit}
-    
+
     \include{content/01_vorspann/01.2_abstract}
     \include{content/01_vorspann/01.3_vorwort}
 

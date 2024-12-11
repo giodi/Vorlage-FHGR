@@ -12,7 +12,7 @@
 Die LaTeX-Dokumentvorlage basiert auf den Vorgaben vom [Leitfaden zum wissenschaftlichen Arbeiten an der FHGR](https://my.fhgr.ch/download/18740) (nicht öffentlich zugänglich). Bei der Vorlage handelt es sich **nicht** um eine offizielle Vorlage der FHGR und wurde von Studierenden anhand der Richtlinien erstellt. Sie richtet sich an alle Studierenden, welche ihre Studienarbeiten mithilfe von LaTeX verfassen möchten und bietet eine Grundlage, um rasch in die Schreibarbeit starten zu können (vgl. [Anleitung](#anleitung)). Die Vorlage kompiliert ein PDF, welches dem PDF/A-2u Profil entspricht (mit veraPDF validiert). Eine Demo der Vorlage ist auf dem Online-LaTeX-Editor «Overleaf» verfügbar: https://www.overleaf.com/read/vcyttfbpdhwp
 
 ## Anleitung
-Schnellstart-Tutorial: [Vorlage im Online‐LaTeX‐Editor "Overleaf" verwenden](https://github.com/giodi/Vorlage-FHGR/wiki/Vorlage-im-Online%E2%80%90LaTeX%E2%80%90Editor-%22Overleaf%22-verwenden#projekt-kopieren). 
+Schnellstart-Tutorial: [Vorlage im Online‐LaTeX‐Editor "Overleaf" verwenden](https://github.com/giodi/Vorlage-FHGR/wiki/Vorlage-im-Online%E2%80%90LaTeX%E2%80%90Editor-%C2%ABOverleaf%C2%BB-verwenden). 
 Weitere Anleitungen sind im [Wiki](https://github.com/giodi/Vorlage-FHGR/wiki) vorzufinden. In der [Vorlage](https://www.overleaf.com/read/vcyttfbpdhwp) selbst sind ebenfalls Beispiele zur Verwendung vorhanden.
 
 ## LaTeX
